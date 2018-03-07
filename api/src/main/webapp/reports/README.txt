@@ -1,0 +1,1 @@
+Aqui ficarão os arquivos gerados pelo sistema a partir dos relatórios .jasper
