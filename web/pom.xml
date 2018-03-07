@@ -16,9 +16,6 @@
 		<destino.dir>WebContent</destino.dir>
 		<dist.dir>angular/dist</dist.dir>
 		<gera.build>${project.basedir}\gera-build.bat</gera.build>
-		<caminho.node>E:\\Desenvolvimento\\nodejs\\node.exe</caminho.node>
-		<caminho.npm>C:\\Users\\wallace\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js</caminho.npm>
-		<comando.npm>install -g @angular/cli</comando.npm>
 	</properties>
   
   
@@ -67,28 +64,28 @@
 			</executions>
 		</plugin>
 		
-		<plugin>
-			<groupId>com.google.code.maven-replacer-plugin</groupId>
-			<artifactId>maven-replacer-plugin</artifactId>
-			<version>1.3.9</version>
-			<executions>
-				<execution>
-					<phase>prepare-package</phase>
-					<goals>
-						<goal>replace</goal>
-					</goals>
-				</execution>
-			</executions>
-			<configuration>
-				<file>${app.component}</file>
-				<replacements>
-					<replacement>
-						<token>@versao</token>
-						<value>${project.version}</value>
-					</replacement>
-				</replacements>
-			</configuration>
-		</plugin>
+<!-- 		<plugin> -->
+<!-- 			<groupId>com.google.code.maven-replacer-plugin</groupId> -->
+<!-- 			<artifactId>maven-replacer-plugin</artifactId> -->
+<!-- 			<version>1.3.9</version> -->
+<!-- 			<executions> -->
+<!-- 				<execution> -->
+<!-- 					<phase>prepare-package</phase> -->
+<!-- 					<goals> -->
+<!-- 						<goal>replace</goal> -->
+<!-- 					</goals> -->
+<!-- 				</execution> -->
+<!-- 			</executions> -->
+<!-- 			<configuration> -->
+<!-- 				<file>${app.component}</file> -->
+<!-- 				<replacements> -->
+<!-- 					<replacement> -->
+<!-- 						<token>@versao</token> -->
+<!-- 						<value>${project.version}</value> -->
+<!-- 					</replacement> -->
+<!-- 				</replacements> -->
+<!-- 			</configuration> -->
+<!-- 		</plugin> -->
 
 		
 

@@ -10,7 +10,7 @@ export enum AuthMethod {
 
 export const environment = {
   production: false,
-  api: 'https://localhost:8080/api/rest',
+  api: 'https://localhost:8080/api/rest/',
   auth_method: AuthMethod.NONE,
   client_name: 'TRF - 1ª Região',
   system_name: 'STUB',
