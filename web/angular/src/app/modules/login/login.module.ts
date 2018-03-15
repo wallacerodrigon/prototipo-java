@@ -5,7 +5,7 @@ import {CoreModule} from '../../core/core.module';
 import {AuthGuard} from '../../core/auth/auth.guard';
 import { LoginComponent } from './component/login-component.component';
 
-const ROUTES: Routes = [
+/*const ROUTES: Routes = [
   {
     path: 'login', canActivateChild: [AuthGuard],
     data: {
@@ -15,15 +15,16 @@ const ROUTES: Routes = [
       {path: '', component: LoginComponent},
     ]
   }
-];
+];*/
 
 @NgModule({
   imports: [
     CoreModule,
-    RouterModule.forChild(ROUTES)
+    //RouterModule.forChild(ROUTES)
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [LoginComponent],
+  exports: [LoginComponent],
 })
 export class LoginModule {
 }

@@ -9,6 +9,7 @@ import {SharedModule} from './shared/shared.module';
 import {UserModule} from './modules/user/user.module';
 import {EmployerModule} from './modules/employer/employer.module';
 import {DashboardModule} from './modules/dashboard/dashboard.module';
+import { LoginModule } from './modules/login/login.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {DashboardModule} from './modules/dashboard/dashboard.module';
     DashboardModule,
     UserModule,
     EmployerModule,
+    LoginModule
   ],
   exports: [],
 

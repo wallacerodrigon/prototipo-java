@@ -1,8 +1,8 @@
 <div>
     <div>
             <h1 >Acesso ao Sistema</h1>
-                
-            <form [formGroup]="rForm" (ngSubmit)="efetuarLogin(rForm.value)"  class="conteudo">
+    </div>
+     <form [formGroup]="rForm" (ngSubmit)="efetuarLogin(rForm.value)"  class="conteudo">
 
                 <mat-input-container class="input-basic">
                     <input matInput placeholder="Login" formControlName="usuario">
@@ -25,5 +25,5 @@
                     <button mat-raised-button   type="button" (click)="entrar()">Entrar</button>
                 </div>
             </form>
-    </div>
+
 </div>

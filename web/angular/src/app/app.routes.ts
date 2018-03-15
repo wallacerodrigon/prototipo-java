@@ -5,11 +5,11 @@ import { LoginComponent } from './modules/login/component/login-component.compon
 export const ROUTES: Routes = [
   {
     path: '', children: [
-      {path: 'login', loadChildren: './modules/login/login.module#LoginModule'},
-      {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
-      {path: 'dashboard', loadChildren: './modules/dashboard/dashboard.module#DashboardModule'},
-      {path: 'user', loadChildren: './modules/user/user.module'},
-      {path: 'employer', loadChildren: './modules/employer/employer.module#EmployerModule'},
+     {path: 'login', component: LoginComponent},
+     {path: 'dashboard', loadChildren: './modules/dashboard/dashboard.module#DashboardModule'},
+     {path: 'user', loadChildren: './modules/user/user.module'},
+     {path: 'employer', loadChildren: './modules/employer/employer.module#EmployerModule'},
+     {path: '', redirectTo: 'login', pathMatch: 'full'},
       {path: '**', component: NotFoundComponent}
     ]
   },
