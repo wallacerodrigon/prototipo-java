@@ -13,9 +13,6 @@
           <img src="{{imageSrc}}" *ngIf="drawer!=undefined && !drawer.opened"/>
           <span style="flex: 1 1 auto;"></span>
           <div *ngIf="displayNav" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
-            <button mat-icon-button aria-label="Alternar auto constraste" (click)="toggleAutoContraste()">
-              <mat-icon aria-hidden="true">invert_colors</mat-icon>
-            </button>
             <app-seccional-change (onChangeSeccional)="onChangeSeccional($event)"></app-seccional-change>
             <button mat-icon-button [mat-menu-trigger-for]="menu">
               <mat-icon>more_vert</mat-icon>
@@ -23,6 +20,7 @@
             <mat-menu x-position="before" #menu="matMenu">
               <button mat-menu-item>Perfil</button>
               <button mat-menu-item>Configurações</button>
+              <button mat-menu-item (click)="logout()" >Sair</button>
             </mat-menu>
           </div>
         </mat-toolbar>
@@ -33,3 +31,4 @@
     </mat-sidenav-content>
   </mat-sidenav-container>
 </section>
+

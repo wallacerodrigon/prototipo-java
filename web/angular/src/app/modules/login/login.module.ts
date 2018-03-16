@@ -4,27 +4,16 @@ import {CoreModule} from '../../core/core.module';
 
 import {AuthGuard} from '../../core/auth/auth.guard';
 import { LoginComponent } from './component/login-component.component';
+import { LoginOutlet } from './login.outlet';
 
-/*const ROUTES: Routes = [
-  {
-    path: 'login', canActivateChild: [AuthGuard],
-    data: {
-      title: 'Identificação'
-    },
-    children: [
-      {path: '', component: LoginComponent},
-    ]
-  }
-];*/
 
 @NgModule({
   imports: [
     CoreModule,
-    //RouterModule.forChild(ROUTES)
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  declarations: [LoginComponent],
-  exports: [LoginComponent],
+  declarations: [LoginComponent, LoginOutlet],
+  exports: [LoginComponent, LoginOutlet],
 })
 export class LoginModule {
 }

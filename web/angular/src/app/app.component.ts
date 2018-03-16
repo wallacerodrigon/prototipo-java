@@ -57,9 +57,12 @@ export class AppComponent implements OnDestroy, OnInit, AfterViewInit {
     this.subscription = this.router.events
       .subscribe((event) => {
         if (event instanceof NavigationEnd) {
-          if (event.url.indexOf('login') === 1) {
+          if (event.url.indexOf('login') === 1 || event.url.indexOf('/') === 1 || event.urlAfterRedirects.indexOf('login') === 1) {
             this.displayNav = false;
-           // this.drawer.close();
+            try {
+              this.drawer.close();
+            } catch(e){
+            }
           } else {
             this.displayNav = true;
             setTimeout(() => {
@@ -76,11 +79,6 @@ export class AppComponent implements OnDestroy, OnInit, AfterViewInit {
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
-
-  toggleAutoContraste() {
-    this.theme = this.theme === THEME_AUTO_CONTRASTE ? THEME : THEME_AUTO_CONTRASTE;
-  }
-
 
   ngOnInit(): void {
     this.isMobileView = (this.media.isActive('xs') || this.media.isActive('sm'));
@@ -132,6 +130,10 @@ export class AppComponent implements OnDestroy, OnInit, AfterViewInit {
 
   onChangeSeccional(data: Options) {
     setTimeout(() => this.clientName = data.label, 0);
+  }
+
+  logout(): void {
+    this.router.navigate(['/']);
   }
 
 

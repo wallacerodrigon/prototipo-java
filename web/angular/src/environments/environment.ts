@@ -14,7 +14,7 @@ export const environment = {
   auth_method: AuthMethod.NONE,
   client_name: 'TRF - 1ª Região',
   system_name: 'STUB',
-  system_version: '1.0.0-SNAPSHOT',
+  system_version: '1.0.1-SNAPSHOT',
   theme: 'ebonyClay',
   themeAutoContraste: 'ebonyClayAutoContraste',
   keycloak: {

@@ -10,10 +10,11 @@ import {UserModule} from './modules/user/user.module';
 import {EmployerModule} from './modules/employer/employer.module';
 import {DashboardModule} from './modules/dashboard/dashboard.module';
 import { LoginModule } from './modules/login/login.module';
-
+ 
 @NgModule({
   declarations: [
     AppComponent
+    
   ],
   imports: [
     BrowserModule,
