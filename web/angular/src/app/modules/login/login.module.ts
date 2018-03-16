@@ -4,16 +4,14 @@ import {CoreModule} from '../../core/core.module';
 
 import {AuthGuard} from '../../core/auth/auth.guard';
 import { LoginComponent } from './component/login-component.component';
-import { LoginOutlet } from './login.outlet';
-
 
 @NgModule({
   imports: [
     CoreModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  declarations: [LoginComponent, LoginOutlet],
-  exports: [LoginComponent, LoginOutlet],
+  declarations: [LoginComponent],
+  exports: [LoginComponent],
 })
 export class LoginModule {
 }
